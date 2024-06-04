@@ -1,0 +1,48 @@
+// Colores
+
+$color-azulosc: #0A0A59;
+$color-azul: #2C708E;
+$color-aqua: #53B2A1;
+$color-aquaosc: #297D9B;
+$color-purple: #5246A5;
+$color-rose: #DD6858;
+$color-yellow:#EAB83B;
+$color-black: #000000;
+$color-white: #ffffff;
+
+$color-txt: #000000;
+
+// Fuentes
+
+$font-title: "Playfair Display", serif;
+$font-txt: "Raleway", sans-serif;
+
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Codigo
+
+*, html, body {
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: initial;
+  text-decoration: none;
+}
+body{
+  background-image: url(./assets/images/Fondo-body.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@import './_mixin';
+@import './_main';
+@import './_herramientas';
+@import './_footer';
+
+
+
+
+

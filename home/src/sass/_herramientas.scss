@@ -1,0 +1,108 @@
+.Herramientas{
+    max-width: 1280px;
+    padding: 10px calc(50vw - 640px);
+    margin-bottom: 30px;
+    @include mobile{
+        width: 100%;
+    }
+    &-cont{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        @include mobile{
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        &-card{
+            @include card($color-aqua);
+            &-sup{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                justify-content: space-between;
+                &-title{
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+                    @include mobile{
+                        width: 70%;
+                    }
+                    &-inicial{
+                        @include title;padding-bottom: 10px;
+                        @include mobile{
+                            padding-bottom: 3vw;
+                        }
+                    }
+                    &-subtitle{
+                        @include Subtitle;
+                    }
+                }
+                &-dirigido{
+                    @include txt;
+                    text-align: right;
+                    color: $color-aqua;
+                    width: 25%;
+                    @include mobile{
+                        font-size: 3vw;
+                    }
+                }
+            }
+            &-item{
+                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 70%;
+                margin-top: 20px;
+                @include mobile{
+                    width: 90%;
+                }
+                &-color{
+                    background-color: $color-aqua;
+                    width: 20%;
+                    height: 1.5vh;
+                    margin-bottom: 20px;
+                    @include mobile{
+                        width: 50%;
+                        height: 1vh;
+                    }
+                }
+                &-txt{
+                    @include txt;
+                    text-align: right;
+                }
+            }
+            &-call{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                @include mobile{
+                    flex-direction: column;
+                }
+                &-info{
+                    display: flex;
+                    align-items: center;
+                    width: 60%;
+                    @include mobile{
+                        width: 100%;
+                        padding-bottom: 5vw;
+                    }
+                    &-img{
+                        width: 40px;
+                    }
+                    &-txt{
+                        @include txt;
+                        padding-left: 10px;
+                    }
+                }
+                &-boton{
+                    @include boton($color-aqua);
+                }
+            }
+        }
+    }
+}

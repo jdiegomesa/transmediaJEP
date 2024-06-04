@@ -1,0 +1,33 @@
+{
+  "name": "Especial",
+  "version": "1.0.0",
+  "description": "Frontend para Especial del agua",
+  "main": "public/index.html",
+  "scripts": {
+    "build:sass": "sass  --no-source-map src/sass:public/css",
+    "copy:scripts": "copyfiles -u 1 ./src/scripts/**/* public",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:scripts": "onchange \"src/scripts/**/*\" -- npm run copy:scripts",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
+    "watch:sass": "sass --no-source-map --watch src/sass/styles.scss public/styles.css",
+    "watch:pug": "pug -w --pretty src/pug --out public",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server public --files public",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:html build:*",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+  },
+  "author": "Juan Diego Mesa O. y Tatiana Pardo C.",
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.0.17",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.1.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.49.8"
+  }
+}
