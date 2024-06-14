@@ -10,22 +10,27 @@
     z-index: 2;
     position: absolute;
     @include mobile{
-      height: 10vh;
+      height: 8vh;
     }
   }
   &-fondo{
     width: 100%;
     position: relative;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+    box-shadow: rgb(81 81 81 / 51%) 2px 2px 15px;
     @include mobile{
-      top: calc(10vh - 1vw);
+      top: calc(8vh - 1vw);
     }
     &-img{
       width: 100%;
       height: auto;
       object-fit: cover;
+      filter: brightness(120%);
       @include mobile{
         height: 36vh;
-        object-position: -15vw;
+        object-position: -9vw;
       }
     }
     &-cont{
@@ -44,6 +49,9 @@
         font-size: 45px;
         padding: 10px 0;
         text-align: center;
+        @include tablet{
+          margin-top: 70px;
+        }
         @include mobile{
           font-size: 8vw;
           width: 100%;

@@ -20,6 +20,7 @@ $font-txt: "Raleway", sans-serif;
 $regular: 400;
 $medium: 500;
 $bold: 700;
+$black: 900;
 
 // Codigo
 
@@ -42,6 +43,8 @@ body{
 @import './_herramientas';
 @import './_footer';
 
+
+@import './_int';
 
 
 
