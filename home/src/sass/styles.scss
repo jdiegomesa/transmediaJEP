@@ -10,7 +10,7 @@ $color-yellow:#EAB83B;
 $color-black: #000000;
 $color-white: #ffffff;
 
-$color-txt: #000000;
+$color-txt: #333;
 
 // Fuentes
 
@@ -19,12 +19,15 @@ $font-txt: "Raleway", sans-serif;
 
 $regular: 400;
 $medium: 500;
+$semibold: 600;
 $bold: 700;
 $black: 900;
 
+@import './_mixin';
+
 // Codigo
 
-*, html, body {
+*{
   margin: 0;
   padding: 0;
   // box-sizing: border-box;
@@ -32,14 +35,56 @@ $black: 900;
   color: initial;
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body{
   background-image: url(./assets/images/Fondo-body.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100vw;
+  overflow-x: hidden;
+  @include mobile{
+    background-size: auto;
+    background-repeat: repeat;
+  }
 }
 
-@import './_mixin';
 @import './_main';
+.JEPDescription{
+  background-color: #fff;
+  width: 880px;
+  border-radius: 30px;
+  margin: 40px auto 0;
+  padding: 40px 200px;
+  @include mobile{
+    width: 70vw;
+    border-radius: 30px;
+    margin: 40px auto 0;
+    padding: 10vw;
+  }
+  &-text{
+    @include txt;
+  }
+}
 @import './_herramientas';
 @import './_footer';
 

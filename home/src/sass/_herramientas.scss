@@ -101,7 +101,7 @@
                     }
                 }
                 &-boton{
-                    @include boton($color-aqua);
+                    @include boton;
                 }
             }
         }
